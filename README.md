@@ -15,6 +15,37 @@
 
 ---
 
+> **Personal Extension (Hajin)** — 팀 프로젝트 종료 이후 개인 포트폴리오 확장 저장소
+> Team Development: 2026.07 ~ 2026.09 · Freeze tag: `team-original-2026-09-02`
+> upstream: [hagenie128/ASAK](https://github.com/hagenie128/ASAK) (팀 원본, push 금지)
+
+| 버전 | 배포 |
+| --- | --- |
+| Team Original | https://asak.stackroom.cloud |
+| Personal Extension (이 repo) | https://hajin-asak.stackroom.cloud |
+
+## Project Origin
+
+**Original ASAK Team Project** — 문서·데이터·제품 기준 정본
+
+| 영역 | 담당 |
+| --- | --- |
+| 문서 | Product Bible, WBS, 구현 가이드, 회의록 |
+| 공통 | Figma·디자인 시스템, MySQL DDL, CORS, 문서 |
+
+## Personal Extension
+
+팀 종료(`team-original-2026-09-02`) 이후 개인적으로 추가·개선한 문서·데이터를 여기에 기록한다.
+
+## Original Repository
+
+- https://github.com/hagenie128/ASAK
+- https://github.com/nayeon0828/ASAK-backend
+- https://github.com/hagenie128/ASAK-Admin
+- https://github.com/hagenie128/ASAK-Kiosk
+
+---
+
 > **설치/첫 시작:** [시작 안내](docs/operations/setup/getting-started.md) · [윈도우 설치](docs/operations/setup/install-windows.md) · [Android PWA 전체화면](docs/operations/setup/android-pwa-fullscreen.md) · Notion [팀 온보딩](https://app.notion.com/p/39551ef04f0b8193ae2ad4d529ab2d7b)
 >
 > 실행 코드는 `ASAK-Kiosk`, `ASAK-Admin`, `ASAK-back`에 있습니다. `frontend/`·`ASAK-front` 안내는 과거 참고 자료이므로 신규 작업에 사용하지 마세요.
