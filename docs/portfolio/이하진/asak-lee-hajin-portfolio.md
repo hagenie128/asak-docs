@@ -1,14 +1,15 @@
 # ASAK 개인 포트폴리오 — 이하진
 
-> 샐러드 키오스크와 관리자 운영 시스템, ASAK  
-> 2026.07.01 ~ 2026.08.21  
-> 맡은 영역: 디자인 시스템·Figma, 관리자 화면, 관리자 API·DB 계약, 운영 문서와 검증
+> 샐러드 키오스크와 관리자 운영 시스템, ASAK<br />
+> 2026.07.02 ~ 2026.09.02 · 2인 팀<br />
+> 포트폴리오 역할 표기: **Full-stack 공동 개발 · Admin/Backend 중심 · DB Modeling · Technical Coordination**<br />
+> 실제 담당 범위: 디자인 시스템·Figma, 관리자 화면, 관리자 API·DB 계약, 운영 문서와 검증
 
 ## 한 줄 소개
 
 **화면을 만드는 데서 멈추지 않고, 매장 직원이 믿고 사용할 수 있는 운영 흐름인지 끝까지 확인하는 개발자입니다.**
 
-ASAK에서는 Figma와 React 화면 구조를 만드는 단계부터 참여해, 이후 관리자 시스템을 전담했습니다. 주문·메뉴·품절·결제·매출이 각각 따로 보이는 페이지가 아니라 실제 매장에서 하나의 흐름으로 이어진다는 점을 기준으로, 기획·화면 설계·API·DB·검증 기록을 함께 다뤘습니다.
+ASAK은 2인 팀으로 진행했고, 프론트엔드와 백엔드를 완전히 분리하기보다 기능별 접점을 함께 확인했습니다. 저는 Figma와 React 화면 구조를 만드는 단계부터 참여해 이후 관리자 도메인과 Backend·DB 계약을 중심으로 맡았습니다. 주문·메뉴·품절·결제·매출이 각각 따로 보이는 페이지가 아니라 실제 매장에서 하나의 흐름으로 이어진다는 점을 기준으로, 기획·화면 설계·API·DB·검증 기록을 함께 다뤘습니다.
 
 ## 내가 일하는 방식
 
@@ -27,7 +28,7 @@ ASAK에서는 Figma와 React 화면 구조를 만드는 단계부터 참여해, 
 
 프로젝트에서 가장 중요하게 지킨 기준은 UI가 보인다고 기능이 완료된 것은 아니라는 점이었습니다. 정적 UI, mock 연결, API 계약, 백엔드 구현, DB 반영, 실 DB 조회, 브라우저 검증, 장치 검증을 각각 다른 상태로 기록했습니다.
 
-이 기준 덕분에 발표나 협업 중 화면은 있지만 mock인 기능, 컴파일은 되지만 운영 DB에 적용되지 않은 기능을 구분할 수 있었습니다. 환불처럼 실제 API가 준비되지 않은 기능은 화면이 있더라도 완료로 표현하지 않았습니다.
+이 기준 덕분에 발표나 협업 중 화면은 있지만 mock인 기능, 컴파일은 되지만 운영 DB에 적용되지 않은 기능을 구분할 수 있었습니다. 가상 결제 환불 API와 실제 PG 환불, 콘솔 영수증과 실물 프린터 출력처럼 검증 수준이 다른 기능도 같은 완료 상태로 묶지 않았습니다.
 
 ### 문제를 발견하면 책임 계층까지 따라갑니다
 
@@ -42,10 +43,25 @@ ASAK에서는 Figma와 React 화면 구조를 만드는 단계부터 참여해, 
 | 프로젝트 초반 | front/back/pipeline 책임 분리, 다중 저장소 운영 방식, daily·상세 entry 작업기록 체계와 온보딩 기준 정리 |
 | 디자인 단계 | 키오스크·관리자 Figma 화면과 공통 컴포넌트·디자인 시스템 설계, Figma Variant를 React props·화면 상태로 매핑 |
 | 구현 전환 | React/Vite·mock 기반을 API 교체 가능한 구조로 정리하고, mock·실제 API·DB 검증 상태를 분리 |
-| 관리자 전담 | Live 주문·상세·상태변경·취소, 메뉴 CRUD·영양·재료·soft delete, 품절·결제수단·매출·대시보드 연결 |
+| 관리자 중심 구현 | Live 주문·상세·상태변경·취소, 메뉴 CRUD·영양·재료·soft delete, 품절·결제수단·매출·대시보드 연결 |
 | 운영 확장 | Cloudinary 이미지 흐름, Admin PWA, `device_event` API와 RTOS 영수증 출력 연결 가이드, WBS·API·DB 문서 정합화 |
 
 최종 2인 팀에서 나는 관리자(`admin`) 도메인을 중심으로 책임졌고, 고객(`user`) 주문 세션은 팀원 담당과 구분해 협업했습니다.
+
+`Technical Coordination`은 공식 PM 직함이 아니라, 요구사항·화면·API·DB·WBS·QA의 접점을 정리한 기여를 설명하기 위한 포트폴리오 표현입니다. 외부 문구에서도 “프로젝트 매니저”나 “팀장”으로 확대하지 않습니다.
+
+## 채용용 핵심 근거 — 2026-09-14 동기화
+
+| 축 | 확인된 근거 | 포트폴리오 표기 상태 |
+| --- | --- | --- |
+| Data Modeling | 레거시 `menu_option` 시드 9,166건을 공통 `opt_policy` 82개와 `opt_policy_item` 734건, 메뉴별 정책 연결·예외 구조로 재편 | **구현·시드 확인**. `menu_opt_policy`는 seed-v3 279건과 8/19 실DB 감사 324건이 달라 단일 수치는 노출하지 않음 |
+| Technical Decisions | 품절 대상을 메뉴·재료·옵션으로 구분하고, 매출 조회를 `summary / monthly / daily / time-slots`로 분리 | **코드·문서 확인**. 재료 품절의 Kiosk 연쇄 반영은 최종 QA에서 실패로 남음 |
+| Performance & QA | 대시보드 전체 응답 약 8초 → 3.7~3.9초 → 1.6~1.7초 → 0.43~0.50초. Admin API 22/24, Kiosk API 17/18 PASS | **실DB·API QA 확인**. 브라우저 UI·실PG·실물 장치는 별도 미검증 |
+| Project Coordination | 요구사항 → 시나리오 → 화면 → API → WBS → 테스트를 ID로 연결하고, 실행 근거가 없는 DONE을 다시 IN_PROGRESS로 조정 | **문서·WBS 확인**. 공식 직함이 아닌 기여 범위로 표현 |
+
+외부 근거는 [asak-docs](https://github.com/hagenie128/asak-docs), [ASAK Notion 허브](https://app.notion.com/p/cd951ef04f0b82b081de019cc9a4c580), [WBS / 개발 진행 현황](https://app.notion.com/p/1ab51ef04f0b8330afca012a4e8d14fa)으로 연결합니다. Notion의 8월 19일 포트폴리오 요약은 중간 스냅샷이므로 최신 구현 수치의 정본으로 사용하지 않습니다.
+
+두 번째 프로젝트 후보인 [ASAK Agent Kit](https://github.com/hagenie128/ASAK-skill)은 Developer Tooling / Team Workflow로 분리합니다. Codex·Claude Code·Cursor·GitHub Copilot·Antigravity·ChatGPT 6개 환경용 패키지와 Windows 설치·검증 도구가 현재 저장소에서 확인됩니다.
 
 ## 대표 경험 1 — 요구사항을 운영 정책으로 구체화
 
@@ -83,7 +99,9 @@ ASAK에서는 Figma와 React 화면 구조를 만드는 단계부터 참여해, 
 
 관리자 대시보드의 실제 DB 조회가 약 8초 걸리는 문제를 확인했을 때, 로딩 UI를 추가하는 것으로 끝내지 않았습니다. 화면에서 정말 필요한 값, DB에서 집계할 값, 이미 조회한 값으로 만들 수 있는 정보를 구분해 조회 구조를 다시 설계했습니다.
 
-초기에는 DB 호출을 10회에서 6회로 줄여 약 3.7~3.9초까지 개선했습니다. 이후 View를 바꾸는 시도가 오히려 느려진 것도 측정으로 확인해 즉시 원복했고, 최종적으로 Mapper의 최근 주문 조회를 베이스 테이블 직접 조회로 바꿔 **실 DB 기준 약 8초에서 0.43~0.50초**까지 줄였습니다.
+초기에는 DB 호출을 10회에서 6회로 줄여 약 3.7~3.9초까지 개선했습니다. KPI·주간 매출 조회가 무거운 View 전체를 읽지 않도록 베이스 테이블을 직접 조회해 1.6~1.7초까지 줄였고, 마지막으로 최근 주문 Mapper도 필요한 컬럼만 직접 조회하도록 바꿔 **실 DB 기준 약 8초에서 0.43~0.50초**까지 개선했습니다.
+
+중간에 `vw_order_list_summary`를 상관 서브쿼리 방식으로 재작성한 시도는 해당 조회가 약 1.3초에서 6.6~6.8초로 악화됐습니다. `EXPLAIN`으로 View가 merge되지 않고 `TEMPTABLE`로 구체화되는 것을 확인해 즉시 원복했습니다. 이 수치는 전체 대시보드 응답 시간이 아니라 최근 주문 View 단일 조회 측정값이므로, 포트폴리오에서도 별도 실패 사례로 분리합니다.
 
 이 경험은 성능 개선이 단순히 쿼리 한 줄을 고치는 일이 아니라, 화면·API·데이터 흐름의 책임을 다시 묻는 일이라는 점을 알려주었습니다. 느려진 시도도 숨기지 않고 원인과 원복 근거를 남긴 점은, 결과뿐 아니라 과정에도 책임지는 개발 방식의 기준이 되었습니다.
 
@@ -99,6 +117,8 @@ ASAK에서는 Figma와 React 화면 구조를 만드는 단계부터 참여해, 
 daily에는 오늘의 작업·블로커·다음 계획을, 상세 entry에는 변경 이유·구현 범위·API/DB 계약·검증 결과·미검증 항목을 남겼습니다. WBS, Git 이력, Bruno, 회의록을 연결해 팀원이 현재 상태를 다시 확인할 수 있게 했습니다.
 
 문서를 보고서가 아니라 협업 도구로 사용한 덕분에, 팀원이 작업의 배경과 남은 위험을 이해한 상태에서 이어갈 수 있었습니다.
+
+2026-09-02 API QA에서는 Admin 22/24, Kiosk 17/18이 통과했습니다. 결제수단의 Admin→Kiosk 반영과 일부 재료 품절 연쇄는 실패로 남겼고, Admin UI 브라우저 클릭·실PG·실물 장치 검증은 완료로 표기하지 않았습니다.
 
 ## 개발자·직원·팀원으로서의 강점
 
@@ -120,7 +140,7 @@ daily에는 오늘의 작업·블로커·다음 계획을, 상세 entry에는 �
 
 ### 30초 버전
 
-ASAK 샐러드 키오스크 프로젝트에서 관리자 시스템을 전담했습니다. Figma와 React 화면 구조부터 시작해 주문·메뉴·품절·매출·대시보드를 Spring Boot API와 MySQL까지 연결했습니다. 제가 중요하게 생각한 것은 화면 구현보다 실제 매장 운영 흐름이었고, 기능의 구현·실DB·브라우저 검증 상태를 구분해 관리했습니다. 대시보드는 실 DB 기준 약 8초였던 조회를 0.5초 내외로 개선한 경험이 있습니다.
+ASAK 샐러드 키오스크 프로젝트를 2인 팀으로 공동 개발했고, 관리자와 Backend·DB 영역을 중심으로 맡았습니다. Figma와 React 화면 구조부터 주문·메뉴·품절·매출·대시보드를 Spring Boot API와 MySQL까지 연결했습니다. 기능의 구현·실DB·브라우저 검증 상태를 구분해 관리했고, 대시보드는 실 DB 기준 약 8초였던 조회를 0.5초 내외로 개선했습니다.
 
 ### 1분 버전
 
@@ -137,6 +157,12 @@ React·Vite, Spring Boot·Java, MyBatis, MySQL·SQL View, Figma, Bruno, Cloudina
 - 개인 작업 기록: `worklog/entries/이하진/`, `worklog/daily/이하진/`
 - 역할·주차별 맥락: `docs/operations/meeting-minutes/README.md`, `2026-w27.md` ~ `2026-W34.md`
 - 성능 실측: `ASAK-back/docs/ai-reports/2026-08-20/dashboard-performance-optimization.md`
+- 옵션 정책·실DB 감사: `docs/ai-reports/2026-08-19/asak-doc-sync-schema-actual-ddl.md`
 - 최신 구현 상태: `docs/wiki/wbs.md`
+- 최종 API QA: `docs/wiki/qa-execution-report-2026-09-02.md`, `docs/wiki/qa-kiosk-execution-report-2026-09-02.md`
+- 팀 개발도구: [hagenie128/ASAK-skill](https://github.com/hagenie128/ASAK-skill)
+- 포트폴리오 배포: [hajin.stackroom.cloud](https://hajin.stackroom.cloud/)
+- 키오스크 배포: [asak.stackroom.cloud](https://asak.stackroom.cloud/)
+- 관리자 배포: [admin.asak.stackroom.cloud](https://admin.asak.stackroom.cloud/)
 
-제출 전에는 품절·주문·매출·대시보드 화면 캡처와 Bruno 요청/응답, 성능 측정 화면을 함께 첨부한다. 실환경 검증을 마친 항목만 “완료”로 갱신한다.
+제출 전에는 품절·주문·매출·대시보드 화면 캡처와 성능 측정 화면을 함께 첨부합니다. QA 수치는 `2026-09-02 API QA 기준`이라고 명시하고, 브라우저·실PG·실물 장치는 별도 검증 상태로 유지합니다.
