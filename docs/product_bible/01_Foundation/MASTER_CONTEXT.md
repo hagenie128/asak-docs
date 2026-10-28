@@ -12,7 +12,7 @@ ASAK는 샐러드 키오스크와 관리자 운영 시스템이다.
 - ASAK: docs/config/data/seed/AI rules
 - ASAK-Kiosk: React JavaScript customer app
 - ASAK_Admin: React JavaScript admin app
-- ASAK-back: Spring Boot 4.1.0 / Java 25
+- ASAK-back: Spring Boot 4.0.7 / Java 25 (`build.gradle` 기준)
 
 ## Fixed Technology
 
@@ -20,7 +20,7 @@ ASAK는 샐러드 키오스크와 관리자 운영 시스템이다.
 - Zustand
 - Axios
 - Vite
-- Spring Boot 4.1.0
+- Spring Boot 4.0.7 (`ASAK-back/build.gradle` 기준)
 - Java 25
 - DB snake_case
 - JSON camelCase

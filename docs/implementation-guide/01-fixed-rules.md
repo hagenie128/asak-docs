@@ -16,7 +16,7 @@
 | --- | --- |
 | Kiosk / Admin | 별도 React JavaScript 앱으로 유지한다. |
 | Frontend | React, React Router, Zustand, Axios, Vite 기준. TypeScript·Tailwind를 임의 도입하지 않는다. |
-| Backend | Spring Boot 4.1.0, Java 25. Controller → Service → Repository → Entity/DB 책임을 지킨다. |
+| Backend | 현재 `ASAK-back/build.gradle` 기준 Spring Boot 4.0.7, Java 25. Controller → Service → Repository → Entity/DB 책임을 지킨다. |
 | 데이터 | DB는 snake_case, JSON은 camelCase를 사용한다. Entity를 API 응답으로 직접 내보내지 않는다. |
 | 비즈니스 규칙 | 서버가 가격 재계산, 품절 영향, 주문 상태 전이를 최종 검증한다. |
 

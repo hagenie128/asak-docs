@@ -10,7 +10,7 @@
 
 - Git
 - Node.js
-- Java 17
+- Java 25 (ASAK-back `build.gradle` 도구체인 기준)
 - Python 3
 - MySQL
 

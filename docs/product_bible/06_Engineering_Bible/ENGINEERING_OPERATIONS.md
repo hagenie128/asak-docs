@@ -3,6 +3,7 @@
 > Status: **CANONICAL**
 > Updated: `2026-08-14`
 > 이 문서는 아래 원문을 출처별 구획으로 통합했습니다. 원문의 규칙·표·체크리스트는 삭제하지 않았습니다.
+> 현재 실행 버전은 `ASAK-back/build.gradle` 기준 Spring Boot **4.0.7**·Java **25**입니다. 아래 `ENVIRONMENT_RULES.md` 원문의 4.1.0 표기는 당시 계획 기록입니다.
 
 ## 통합 원문
 
